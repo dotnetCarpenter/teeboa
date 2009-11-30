@@ -12,8 +12,17 @@
     </head>
     <body>
     	<script type="application/javascript;version=1.8">
-    		
+    		$.getJSON('json/articles.json', function (data, textStatus) {
+			  // data will be a jsonObj
+			  this; // the options for this ajax request
+			});
     	</script>
-        <h1>New Web Project Page</h1>
+        <h1>Test Data Page</h1>
+		<fieldset id="articles">
+			<legend>Articles</legend>
+		</fieldset>
+		<fieldset id="providers">
+			<legend>Providers</legend>
+		</fieldset>
     </body>
 </html>
