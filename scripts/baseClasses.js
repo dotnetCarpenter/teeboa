@@ -29,7 +29,7 @@ Teeboa.Article = function(config){
  */
 Teeboa.Customer = function(config){
 	this.id = config.id;
-}();
+}(1234);
 /**
  * A provider.
  * @param {Object} config
