@@ -24,7 +24,7 @@ Teeboa.Article = function(config){
 	this.purchasePrice = config.purchase_timestamp;
 };
 /**
- * A user. Singleton
+ * A user with id = 1234. Singleton
  * @param {Object} config
  */
 Teeboa.Customer = function(config){
