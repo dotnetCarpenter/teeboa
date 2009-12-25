@@ -6,17 +6,37 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>TEEBOA</title>
-		<script type="application/javascript" src="lib/jquery/jquery-1.3.2.min.js"></script>
+		<style type="text/css">
+			legend{ cursor: pointer; }
+		</style>
+		<script type="application/javascript" src="lib/jquery/jquery-1.3.2.js"></script>
 		<script type="application/javascript" src="lib/hdStore/hdStore.js"></script>
 		<script type="application/javascript" src="scripts/baseClasses.js"></script>
 		<script type="application/javascript" src="scripts/classes.js"></script>
     </head>
     <body>
-    	<script type="application/javascript;version=1.8">
-    		$.getJSON('json/articles.json', function (data, textStatus) {
-			  // data will be a jsonObj
-			  this; // the options for this ajax request
+    	<!--<script type="application/javascript;version=1.8">-->
+		<script type="text/javascript">
+    		// setup
+			$.ajaxSetup({dataType:'json'});
+			
+    		$(function(){
+			  $('#articles').click(function(){
+			  	getArticles();
+			  });
 			});
+			function getArticles(){
+	    		$.getJSON('json/articles.json', function(data, textStatus){
+				  // data will be a jsonObj
+				//  this; // the options for this ajax request
+				console.log(data.articles);
+				  for (var key in data.articles) {
+				  	//Teeboa.Articles.add();
+					
+					document.writeln(key);
+				  }
+				});
+			}
     	</script>
         <h1>Test Data Page</h1>
 		<fieldset id="articles">
