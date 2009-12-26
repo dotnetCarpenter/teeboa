@@ -11,7 +11,7 @@ var Teeboa = {};
  * @param {Object} config
  */
 Teeboa.Article = function(config){
-	this.id = config.id;
+	this.id = config.article_id;
 	this.headline = config.article_headline;
 	this.byLine = config.journalist_name;
 	this.deck = config.article_summary;
@@ -38,6 +38,8 @@ Teeboa.Provider = function(config){
 	this.id = config.supplier_id;
 	this.name = config.supplier_name;
 	this.logo = config.supplier_logo;
+	
+	return this.id;
 };
 /**
  * A transaction.
