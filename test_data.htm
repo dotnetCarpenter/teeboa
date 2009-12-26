@@ -20,16 +20,20 @@
     		$(function(){
 				function getArticles(){
 		    		$.getJSON('json/articles.json', function(data, textStatus){
+					  var article;
 					  for (var key in data.articles) {
-					  	Teeboa.Articles.add(data.articles[key]);
+					  	article = new Teeboa.Article(data.articles[key]);
+						Teeboa.Articles.add(article.id, article);						
 					  }
 					});
 				}
 				function getProviders(){
 					$.getJSON('json/providers.json', function(data, textStatus){
-					  for (var key in data.providers) {
-					  	Teeboa.Articles.add(data.providers[key]);
-					  }
+						var provider;
+						for (var key in data.providers) {
+							provider = new Teeboa.Provider(data.providers[key]);
+							Teeboa.Articles.add(provider.id, provider);
+						}
 					});
 				}
 				function displayArticles(){
