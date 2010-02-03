@@ -28,7 +28,9 @@ Teeboa.Article = function(config){
  * @param {Object} config
  */
 Teeboa.Customer = function(config){
-	this.id = config.id;
+	this.id = config.customer_input_id;
+	this.name = config.customer_name;
+	this.email = config.customer_email;
 	this.filters = new hdStore('filters');
 	/**
 	 * Add a filter to use as criteria when "MyPaper" is shown and
@@ -45,7 +47,7 @@ Teeboa.Customer = function(config){
 	/**
 	 * Remove a filter used as criteria when "MyPaper" is shown and
 	 * used on the criteria page
-	 * @param {String} id
+	 * @param {String} id The filter id
 	 * @method removeFilter
 	 */
 	this.removeFilter = function(id){
