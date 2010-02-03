@@ -1,6 +1,6 @@
 /**
  * @author Jon Ege Ronnenberg
- * @version 0.1
+ * @version 0.2
  * Property names is to the fullest extent taken from the blog post 'NEWSPAPER JARGON'
  * http://vasukibelavadi.wordpress.com/2006/08/06/newspaper-jargon/
  */
@@ -29,6 +29,30 @@ Teeboa.Article = function(config){
  */
 Teeboa.Customer = function(config){
 	this.id = config.id;
+	this.filters = new hdStore('filters');
+	/**
+	 * Add a filter to use as criteria when "MyPaper" is shown and
+	 * to show on the criteria page
+	 * @param {String} id The filter id
+	 * @param {String} providerid The Teeboa.Provider.id
+	 * @param {String} topicid
+	 * @method addFilter
+	 */
+	this.addFilter = function(id, providerid, topicid){
+		this.filters.add(id, { providerId: providerid, topicId: topicid });
+		//TODO: do POST AJAX call to /{CustomerId}/Filter/Update
+	};
+	/**
+	 * Remove a filter used as criteria when "MyPaper" is shown and
+	 * used on the criteria page
+	 * @param {String} id
+	 * @method removeFilter
+	 */
+	this.removeFilter = function(id){
+		var filter = this.filters.getItem(id);
+		this.filters.remove(id);
+		//TODO: do DELETE AJAX call to /{CustomerId}/Filter/Update
+	};
 }(1234);
 /**
  * A provider.
@@ -38,7 +62,16 @@ Teeboa.Provider = function(config){
 	this.id = config.supplier_id;
 	this.name = config.supplier_name;
 	this.logo = config.supplier_logo;
-	
+	this.topics = new hdStore('topics');
+	// add topics to the provider
+	for(var i = 0; i < config.supplier_topic_list.length; i++){
+		this.topics.add(
+			config.supplier_topic_list[i].topic_id,{
+				text: config.supplier_topic_list[i].topic_text,
+				isSelected: config.supplier_topic_list[i].is_topic_selected
+			}
+		);
+	};
 	return this.id;
 };
 /**
