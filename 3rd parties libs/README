@@ -1,0 +1,6 @@
+lib
+  hdStore http://github.com/dotnetCarpenter/hdStore
+    
+  jQuery  http://github.com/jquery/jquery
+    masonry http://github.com/desandro/masonry
+    animate-css-rotate-scale  http://github.com/zachstronaut/jquery-animate-css-rotate-scale
