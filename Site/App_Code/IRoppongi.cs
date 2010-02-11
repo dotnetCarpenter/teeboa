@@ -7,7 +7,7 @@ using System.ServiceModel;
 using System.IO;
 using System.ServiceModel.Web;
 
-namespace RoppongiAPI
+namespace Roppongi.API
 {
     [ServiceContract]
     interface IRoppongi

@@ -8,9 +8,8 @@ using System.Text;
 using FirebirdSql.Data.FirebirdClient;
 using System.IO;
 using System.ServiceModel.Web;
-using ApiLibrary;
 
-namespace RoppongiAPI
+namespace Roppongi.API
 {
     // NOTE: If you change the class name "Roppongi" here, you must also update the reference to "Roppongi" in Web.config and in the associated .svc file.
     public partial class Roppongi : IRoppongi
