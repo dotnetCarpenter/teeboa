@@ -107,7 +107,7 @@ p {
 
 #header {
 	height:50px;
-	background:url(../images/aurora1.jpg) no-repeat #6f9f8d 0 -400px;
+	background:url(../images/background.jpg) no-repeat #6f9f8d 0;
 }
 
 h1.headerLogo {

@@ -24,7 +24,7 @@ Teeboa.Article = function(config){
 	this.purchasePrice = config.purchase_timestamp;
 };
 /**
- * A user with id = 1234. Singleton
+ * A user
  * @param {Object} config
  */
 Teeboa.Customer = function(config){
@@ -55,7 +55,7 @@ Teeboa.Customer = function(config){
 		this.filters.remove(id);
 		//TODO: do DELETE AJAX call to /{CustomerId}/Filter/Update
 	};
-}(1234);
+};
 /**
  * A provider.
  * @param {Object} config
