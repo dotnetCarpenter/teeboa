@@ -1,0 +1,6 @@
+C:\Projects\Teeboa\Library\bin\Release\Roppongi.Library.dll
+C:\Projects\Teeboa\Library\bin\Release\Roppongi.Library.pdb
+C:\Projects\Teeboa\Library\bin\Release\FirebirdSql.Data.FirebirdClient.dll
+C:\Projects\Teeboa\Library\obj\Release\ResolveAssemblyReference.cache
+C:\Projects\Teeboa\Library\obj\Release\Roppongi.Library.dll
+C:\Projects\Teeboa\Library\obj\Release\Roppongi.Library.pdb
