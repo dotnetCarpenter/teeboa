@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roppongi.Library", "Library\Roppongi.Library.csproj", "{B962809B-021B-455F-AE20-CC78433FF7B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Roppongi.Api", "Api\Roppongi.Api.csproj", "{323FE110-7400-4C23-AD20-CC199E87FCBB}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Site", "Site\", "{3F982DCF-C1BA-4FE6-A419-C7281E84868A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		ProjectReferences = "{323FE110-7400-4C23-AD20-CC199E87FCBB}|Roppongi.Api.dll;{B962809B-021B-455F-AE20-CC78433FF7B8}|Roppongi.Library.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Site"
+		Debug.AspNetCompiler.PhysicalPath = "Site\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Site\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Site"
+		Release.AspNetCompiler.PhysicalPath = "Site\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Site\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "55291"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B962809B-021B-455F-AE20-CC78433FF7B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B962809B-021B-455F-AE20-CC78433FF7B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B962809B-021B-455F-AE20-CC78433FF7B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B962809B-021B-455F-AE20-CC78433FF7B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{323FE110-7400-4C23-AD20-CC199E87FCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{323FE110-7400-4C23-AD20-CC199E87FCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{323FE110-7400-4C23-AD20-CC199E87FCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{323FE110-7400-4C23-AD20-CC199E87FCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F982DCF-C1BA-4FE6-A419-C7281E84868A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F982DCF-C1BA-4FE6-A419-C7281E84868A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F982DCF-C1BA-4FE6-A419-C7281E84868A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F982DCF-C1BA-4FE6-A419-C7281E84868A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

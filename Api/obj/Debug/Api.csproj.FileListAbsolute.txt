@@ -1,0 +1,9 @@
+C:\Projects\Teeboa\Api\bin\Debug\Api.dll.config
+C:\Projects\Teeboa\Api\bin\Debug\Api.dll
+C:\Projects\Teeboa\Api\bin\Debug\Api.pdb
+C:\Projects\Teeboa\Api\bin\Debug\FirebirdSql.Data.FirebirdClient.dll
+C:\Projects\Teeboa\Api\bin\Debug\Roppongi.Library.dll
+C:\Projects\Teeboa\Api\bin\Debug\Roppongi.Library.pdb
+C:\Projects\Teeboa\Api\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\Teeboa\Api\obj\Debug\Api.dll
+C:\Projects\Teeboa\Api\obj\Debug\Api.pdb
