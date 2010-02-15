@@ -6,3 +6,4 @@ C:\Projects\Teeboa\Api\bin\Debug\Roppongi.Library.pdb
 C:\Projects\Teeboa\Api\obj\Debug\ResolveAssemblyReference.cache
 C:\Projects\Teeboa\Api\obj\Debug\Roppongi.Api.dll
 C:\Projects\Teeboa\Api\obj\Debug\Roppongi.Api.pdb
+C:\Projects\Teeboa\Api\bin\Debug\FirebirdSql.Data.FirebirdClient.dll

@@ -37,7 +37,7 @@
 		            });
 		        }
 		        function getProviders() {
-		            $.getJSON('json/providers.json', function(data, textStatus) {
+		            $.getJSON("api/" + user.id + "/providers", function(data, textStatus) {
 		                var provider;
 		                for (var key in data.providers) {
 		                    provider = new Teeboa.Provider(data.providers[key]);
@@ -57,7 +57,7 @@
 
 		        // get the data
 		        getArticles();
-		        //  getProviders();
+		        getProviders();
 
 		        // set behavior
 		        $('#articles legend').click(function() {

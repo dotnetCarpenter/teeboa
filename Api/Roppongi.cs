@@ -14,6 +14,7 @@ namespace Roppongi.Api
     // NOTE: If you change the class name "Roppongi" here, you must also update the reference to "Roppongi" in Web.config and in the associated .svc file.
     public partial class Roppongi : IRoppongi
     {
+        private string contentType = "application/json";
         #region IRoppongi Members
 
         public Stream GetArticles(string CustomerId)
@@ -21,7 +22,7 @@ namespace Roppongi.Api
             FbParameter cust = new FbParameter("customer_id", CustomerId);
             FbParameter filter = new FbParameter("filter", null);
 
-            WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("article_list", "articles", cust, filter)));
         }
 
@@ -30,7 +31,7 @@ namespace Roppongi.Api
             FbParameter cust = new FbParameter("customer_id", CustomerId);
             FbParameter article = new FbParameter("article_id", int.Parse(ArticleId));
 
-            WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("article_purchase", cust, article)));
         }
 
@@ -39,13 +40,13 @@ namespace Roppongi.Api
             FbParameter cust = new FbParameter("customer_id", int.Parse(CustomerId));
             FbParameter article = new FbParameter("article_id", int.Parse(ArticleId));
 
-            WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("article_detail", cust, article)));
         }
 
         public Stream GetProviders(string CustomerId)
         {
-            WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("supplier_list", "providers")));
         }
 
@@ -53,7 +54,7 @@ namespace Roppongi.Api
         {
             FbParameter cust = new FbParameter("customer_id", CustomerId);
 
-            WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("customer_criteria_list", cust)));
         }
 
@@ -79,7 +80,7 @@ namespace Roppongi.Api
         {
             FbParameter cust = new FbParameter("customer_id", CustomerId);
 
-            WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("customer_account_statement", cust)));
         }
 
@@ -87,7 +88,7 @@ namespace Roppongi.Api
         {
             FbParameter cust = new FbParameter("customer_id", CustomerId);
 
-            WebOperationContext.Current.OutgoingResponse.ContentType = "text/html";
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("customer_account_balance", cust)));
         }
 
