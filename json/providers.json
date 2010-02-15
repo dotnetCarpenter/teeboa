@@ -1,0 +1,24 @@
+{
+   "providers":[
+      {
+         "supplier_id":6,
+         "supplier_name":"Ekstra Bladet",
+         "supplier_logo":""
+      },
+      {
+         "supplier_id":7,
+         "supplier_name":"borsen.dk",
+         "supplier_logo":""
+      },
+      {
+         "supplier_id":5,
+         "supplier_name":"jp.dk",
+         "supplier_logo":""
+      },
+      {
+         "supplier_id":8,
+         "supplier_name":"weekendavisen.dk",
+         "supplier_logo":""
+      }
+   ]
+}

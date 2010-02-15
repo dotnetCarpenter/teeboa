@@ -1,0 +1,172 @@
+{
+   "articles":[
+      {
+         "article_id":12,
+         "article_headline":"Her æder grundskylden af din skattelettelse",
+         "article_summary":"17 kommuner hæver ejendomsskatten på boliggrunde. Her er kommunerne, hvor indbyggere og sommerhusejere rammes.",
+         "article_timestamp":"05-01-2010 15:02:38",
+         "article_price":"",
+         "supplier_name":"jp.dk",
+         "supplier_logo":"",
+         "journalist_name":"SVEND BOYE THOMSEN",
+         "topic_name":"Privatøkonomi",
+         "is_purchased":"TRUE "
+      },
+      {
+         "article_id":7,
+         "article_headline":"Island vil ikke betale bankgæld",
+         "article_summary":"Islands præsident nægter at underskrive lov om betaling af gæld fra bankkrakket i 2008 til Storbritannien og Holland.",
+         "article_timestamp":"05-01-2010 14:35:11",
+         "article_price":"",
+         "supplier_name":"jp.dk",
+         "supplier_logo":"",
+         "journalist_name":"Ritzau",
+         "topic_name":"Økonomi",
+         "is_purchased":"TRUE "
+      },
+      {
+         "article_id":6,
+         "article_headline":"Bæltekøretøjer i sneaktioner",
+         "article_summary":"Især Nord- og Nordvestjylland er hårdt ramt af snestorm, kuling og fygning. Resten af landet slipper relativt let. Se her, hvor sneen rammer.",
+         "article_timestamp":"05-01-2010 14:39:57",
+         "article_price":"",
+         "supplier_name":"jp.dk",
+         "supplier_logo":"",
+         "journalist_name":"MIA QVIST ANDERSEN",
+         "topic_name":"Trafik og vejr",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":10,
+         "article_headline":"To fundet skudt i en landejendom",
+         "article_summary":"To personer blev tirsdag formiddag fundet skudt i Gundsømagle nord for Roskilde. De har været døde i flere dage.",
+         "article_timestamp":"05-01-2010 14:58:15",
+         "article_price":"",
+         "supplier_name":"jp.dk",
+         "supplier_logo":"",
+         "journalist_name":"ANDERS JØRGENSEN",
+         "topic_name":"Indland",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":11,
+         "article_headline":"Dansk film vækker muslimsk vrede",
+         "article_summary":"Sudans regering har kastet dens vrede på den danske film &quot;Hævnen&quot;, som instruktøren Susanne Bier er ved at indspille i Kenya og Danmark.",
+         "article_timestamp":"05-01-2010 15:00:32",
+         "article_price":"",
+         "supplier_name":"jp.dk",
+         "supplier_logo":"",
+         "journalist_name":"Ritzau",
+         "topic_name":"Film",
+         "is_purchased":"TRUE "
+      },
+      {
+         "article_id":13,
+         "article_headline":"Direktør undskylder &quot;verdens værste handel&quot;",
+         "article_summary":"Han er af medierne blevet udnævnt til en af de dårligste topchefer i USA nogensinde. Nu kryber han selv til bekendelse.",
+         "article_timestamp":"05-01-2010 15:14:26",
+         "article_price":"",
+         "supplier_name":"jp.dk",
+         "supplier_logo":"",
+         "journalist_name":"SVEND BOYE THOMSEN",
+         "topic_name":"Erhverv",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":14,
+         "article_headline":"Skød konen nytårsaften",
+         "article_summary":"Familietragedie: Det var angiveligt en 43-årig mand, der tog livet af sin 41-årige kone og dernæst sig selv i Gundsømagle. Manden skød konen og sig selv nytårsaften",
+         "article_timestamp":"05-01-2010 15:16:32",
+         "article_price":"",
+         "supplier_name":"Ekstra Bladet",
+         "supplier_logo":"",
+         "journalist_name":"Thea Pedersen",
+         "topic_name":"Indland",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":15,
+         "article_headline":"GOG i betalingsstandsning",
+         "article_summary":"Den traditionsrige håndboldklub GOG i betalingsstandsning. Har foreslået kreditorerne at de nøjes med 10 procent og afventer nu deres svar",
+         "article_timestamp":"05-01-2010 15:17:46",
+         "article_price":"",
+         "supplier_name":"Ekstra Bladet",
+         "supplier_logo":"",
+         "journalist_name":" Jan Kjeldtoft",
+         "topic_name":"Sport",
+         "is_purchased":"TRUE "
+      },
+      {
+         "article_id":16,
+         "article_headline":"Svineheld: Vandt tre mio. ved en fejl",
+         "article_summary":"Fynsk vennerpar vandt to af lørdagens tre milliongevinster i lotto. Begge par kom til at spille deres fælles lottotal",
+         "article_timestamp":"05-01-2010 15:19:13",
+         "article_price":"",
+         "supplier_name":"Ekstra Bladet",
+         "supplier_logo":"",
+         "journalist_name":"Jonas Hüttel",
+         "topic_name":"Sport",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":17,
+         "article_headline":"Wozniacki som legetante i Kina",
+         "article_summary":"Caroline Wozniacki, der selv drømmer om at blive mor i en ung alder, tog kegler, da tennisglade børn fik hendes opmærksomhed",
+         "article_timestamp":"05-01-2010 15:21:12",
+         "article_price":"",
+         "supplier_name":"Ekstra Bladet",
+         "supplier_logo":"",
+         "journalist_name":"Søren Lauridsen",
+         "topic_name":"Sport",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":18,
+         "article_headline":"F1-lånet står til sejr over F3",
+         "article_summary":"",
+         "article_timestamp":"05-01-2010 15:22:52",
+         "article_price":"",
+         "supplier_name":"borsen.dk",
+         "supplier_logo":"",
+         "journalist_name":"Gerd Buchhave",
+         "topic_name":"Privatøkonomi",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":19,
+         "article_headline":"Danmark kan gå i sort ved strejke",
+         "article_summary":"",
+         "article_timestamp":"05-01-2010 15:24:06",
+         "article_price":"",
+         "supplier_name":"borsen.dk",
+         "supplier_logo":"",
+         "journalist_name":"Ritzau",
+         "topic_name":"Politik",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":20,
+         "article_headline":"Verdens tilstand",
+         "article_summary":"",
+         "article_timestamp":"06-01-2010 20:01:32",
+         "article_price":"",
+         "supplier_name":"weekendavisen.dk",
+         "supplier_logo":"",
+         "journalist_name":" Anne Knudsen",
+         "topic_name":"Leder",
+         "is_purchased":"FALSE"
+      },
+      {
+         "article_id":21,
+         "article_headline":"DR-journalist vinder Cavling-prisen",
+         "article_summary":"DR's reporter Jesper Tynell vinder Cavling-prisen 2009. Han får den for sin dækning af lovbrud i Beskæftigelsesministeriet.",
+         "article_timestamp":"06-01-2010 20:04:24",
+         "article_price":"",
+         "supplier_name":"jp.dk",
+         "supplier_logo":"",
+         "journalist_name":"Ritzau",
+         "topic_name":"Medier",
+         "is_purchased":"FALSE"
+      }
+   ]
+}
