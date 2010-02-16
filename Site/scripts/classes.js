@@ -6,18 +6,18 @@
  * Provider collection.
  * Singleton
  */
-Teeboa.Providers = function(){
+Roppongi.Providers = function(){
 	return new hdStore('providers');
 }();
 /**
  * Articles collection.
  * Singleton
  */
-Teeboa.Articles = function(){
+Roppongi.Articles = function(){
 	return new hdStore('articles');
 }();
 /**
  * Transaction collection.
  * Singleton
  */
-Teeboa.Transactions = function(){ return new hdStore('transactions'); }();
+Roppongi.Transactions = function(){ return new hdStore('transactions'); }();

@@ -1,16 +1,16 @@
 /**
  * @author Jon Ege Ronnenberg
- * @version 0.2
+ * @version 0.4
  * Property names is to the fullest extent taken from the blog post 'NEWSPAPER JARGON'
  * http://vasukibelavadi.wordpress.com/2006/08/06/newspaper-jargon/
  */
-var Teeboa = {};
+var Roppongi = {};
 /**
  * An article
  * @classDescription A Teeboa article.
  * @param {Object} config
  */
-Teeboa.Article = function(config){
+Roppongi.Article = function(config){
 	this.id = config.article_id;
 	this.headline = config.article_headline;
 	this.byLine = config.journalist_name;
@@ -19,15 +19,15 @@ Teeboa.Article = function(config){
 	this.dateline = config.article_timestamp;
 	this.providerName = config.supplier_name;
 	this.providerLogo = config.supplier_logo;
-	this.topicName = config.topic_name;
+	this.topic = config.topic_name;
 	this.purchaseTimestamp = config.purchase_timestamp;
-	this.purchasePrice = config.purchase_timestamp;
+	this.price = config.purchase_timestamp;
 };
 /**
  * A user
  * @param {Object} config
  */
-Teeboa.Customer = function(config){
+Roppongi.Customer = function(config){
 	this.id = config.customer_input_id;
 	this.name = config.customer_name;
 	this.email = config.customer_email;
@@ -36,7 +36,7 @@ Teeboa.Customer = function(config){
 	 * Add a filter to use as criteria when "MyPaper" is shown and
 	 * to show on the criteria page
 	 * @param {String} id The filter id
-	 * @param {String} providerid The Teeboa.Provider.id
+	 * @param {String} providerid The Roppongi.Provider.id
 	 * @param {String} topicid
 	 * @method addFilter
 	 */
@@ -60,7 +60,7 @@ Teeboa.Customer = function(config){
  * A provider.
  * @param {Object} config
  */
-Teeboa.Provider = function(config){
+Roppongi.Provider = function(config){
 	this.id = config.supplier_id;
 	this.name = config.supplier_name;
 	this.logo = config.supplier_logo;
@@ -80,7 +80,7 @@ Teeboa.Provider = function(config){
  * A transaction.
  * @param {Object} config
  */
-Teeboa.Transaction = function(config){
+Roppongi.Transaction = function(config){
 	this.date = config.transaction_date;
 	this.text = config.transaction_text;
 	this.amount = config.transaction_amount;

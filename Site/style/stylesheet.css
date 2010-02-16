@@ -60,6 +60,10 @@ body {
 	margin:0 auto;
 	text-align:left;
 }
+.loading {
+	background: url(../images/ajax-loader.gif) no-repeat scroll center center;
+	min-height: 100px;
+}
 
 /***************************************
 

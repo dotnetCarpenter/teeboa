@@ -9,55 +9,65 @@
 		<style type="text/css">
 			legend{ cursor: pointer; }
 		</style>
-		<script type="application/javascript" src="lib/jquery-1.4.1.min.js"></script>
-		<script type="application/javascript" src="lib/jquery.masonry.min.js"></script>
-		<script type="application/javascript" src="lib/hdStore.js"></script>
-		<script type="application/javascript" src="lib/localStorage.js"></script>
-		<script type="application/javascript" src="lib/priority.js"></script>
-		<script type="application/javascript" src="scripts/baseClasses.js"></script>
-		<script type="application/javascript" src="scripts/classes.js"></script>
+		<script type="text/javascript" src="lib/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.masonry.min.js"></script>
+		<script type="text/javascript" src="lib/hdStore.js"></script>
+		<script type="text/javascript" src="lib/localStorage.js"></script>
+		<script type="text/javascript" src="lib/priority.js"></script>
+		<script type="text/javascript" src="scripts/baseClasses.js"></script>
+		<script type="text/javascript" src="scripts/classes.js"></script>
     </head>
     <body>
     	<!--<script type="application/javascript;version=1.8">-->
 		<script type="text/javascript">
-		    $(function() {
-		        var user = new Teeboa.Customer({
+		        var user = new Roppingi.Customer({
 		            "customer_input_id": 1234,
 		            "customer_name": "Jon Ege Ronnenberg",
 		            "customer_email": "jon.ronnenberg@gmail.com"
 		        });
+				/*
 
 		        function getArticles() {
-		            $.getJSON("api/" + user.id + "/articles", function(data, textStatus) {
+		            //$.getJSON("api/" + user.id + "/articles", function(data, textStatus) {
+					$.getJSON("json/articles.json", function(data, textStatus) {
 		                var article;
-		                for (var key in data.articles) {
-		                    article = new Teeboa.Article(data.articles[key]);
-		                    Teeboa.Articles.add(article.id, article);
-		                }
+						try {
+							for (var key in data.articles) {
+								article = new Roppongi.Article(data.articles[key]);
+								Roppongi.Articles.add(article.id, article);
+								console.log(Roppongi.Articles.getCount());
+							}
+						}
+						catch(e){
+							console.debug(e);
+						}
 		            });
 		        }
 		        function getProviders() {
 		            $.getJSON("api/" + user.id + "/providers", function(data, textStatus) {
 		                var provider;
 		                for (var key in data.providers) {
-		                    provider = new Teeboa.Provider(data.providers[key]);
-		                    Teeboa.Articles.add(provider.id, provider);
+		                    provider = new Roppongi.Provider(data.providers[key]);
+		                    Roppongi.Articles.add(provider.id, provider);
 		                }
 		            });
 		        }
+				
+			$(function() {
 		        function displayArticles(target) {
-		            $(target).html("<ol><li>" + Teeboa.Articles.toArray().join("</li><li>") + "</li></ol>");
-
+		            //$(target).html("<ol><li>" + Roppongi.Articles.toArray().join("</li><li>") + "</li></ol>");
+	//				$(target).after(JSON.stringify(Roppingi.Articles.toArray()));
+					$(target).after(Roppingi.Articles.toArray().toString());
 		        }
 		        function displayProviders() {
-		            var pro = Teeboa.Providers;
+		            var prov = Roppongi.Providers;
 
 		        }
 
 
 		        // get the data
 		        getArticles();
-		        getProviders();
+		  //      getProviders();
 
 		        // set behavior
 		        $('#articles legend').click(function() {
@@ -66,8 +76,9 @@
 		        $('#providers legend').click(function() {
 		            displayProviders();
 		        });
+		        
 		    });
-			
+			*/
 			
     	</script>
         <h1>Test Data Page</h1>
