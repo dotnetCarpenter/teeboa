@@ -14,7 +14,7 @@ namespace Roppongi.Api
     // NOTE: If you change the class name "Roppongi" here, you must also update the reference to "Roppongi" in Web.config and in the associated .svc file.
     public partial class Roppongi : IRoppongi
     {
-        private string contentType = "application/json";
+        private string contentType = "application/json; charset=utf-8;";
         #region IRoppongi Members
 
         public Stream GetArticles(string CustomerId)
