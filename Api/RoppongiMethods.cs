@@ -47,10 +47,10 @@ namespace Roppongi.Api
             }
             return json.ToString();
         }
-        //PERF: Should return a generic type based on DbType
+        //PERF: Should return a strong type based on DbType using generic return types
         private static object jsonify(object value)
         {
-            return Regex.IsMatch(value.ToString(), @"^\d+$") ? value : "\"" + Regex.Replace(value.ToString(), "\"", "&quot;") + "\"";
+            return Regex.IsMatch(value.ToString(), @"^\d+$|TRUE |FALSE$") ? Convert.ToString(value).ToLower() : "\"" + Regex.Replace(value.ToString(), "\"", "&quot;") + "\"";
         }
 
 
