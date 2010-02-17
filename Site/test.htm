@@ -8,8 +8,10 @@
         <title>TEEBOA</title>
 		<style type="text/css">
 			legend{ cursor: pointer; }
+			.waiting { background-color: #FF0000; }
+			.ready { background-color: #B4E086; }
 		</style>
-		<script type="text/javascript" src="lib/jquery-1.3.2.min.js"></script>
+		<script type="text/javascript" src="lib/jquery-1.4.1.min.js"></script>
 		<script type="text/javascript" src="lib/jquery.masonry.min.js"></script>
 		<script type="text/javascript" src="lib/hdStore.js"></script>
 		<script type="text/javascript" src="lib/localStorage.js"></script>
@@ -20,27 +22,27 @@
     <body>
     	<!--<script type="application/javascript;version=1.8">-->
 		<script type="text/javascript">
-		        var user = new Roppingi.Customer({
+		        var user = new Roppongi.Customer({
 		            "customer_input_id": 1234,
 		            "customer_name": "Jon Ege Ronnenberg",
 		            "customer_email": "jon.ronnenberg@gmail.com"
 		        });
-				/*
+				
 
 		        function getArticles() {
-		            //$.getJSON("api/" + user.id + "/articles", function(data, textStatus) {
-					$.getJSON("json/articles.json", function(data, textStatus) {
+		            $.getJSON("api/" + user.id + "/articles", function(data, textStatus) {
+					//$.getJSON("json/articles.json", function(data, textStatus) {
 		                var article;
 						try {
 							for (var key in data.articles) {
 								article = new Roppongi.Article(data.articles[key]);
 								Roppongi.Articles.add(article.id, article);
-								console.log(Roppongi.Articles.getCount());
 							}
 						}
 						catch(e){
 							console.debug(e);
 						}
+						$('#articles').removeClass('waiting').addClass('ready');
 		            });
 		        }
 		        function getProviders() {
@@ -50,43 +52,41 @@
 		                    provider = new Roppongi.Provider(data.providers[key]);
 		                    Roppongi.Articles.add(provider.id, provider);
 		                }
+						$('#providers').removeClass('waiting').addClass('ready');
 		            });
 		        }
 				
 			$(function() {
 		        function displayArticles(target) {
-		            //$(target).html("<ol><li>" + Roppongi.Articles.toArray().join("</li><li>") + "</li></ol>");
-	//				$(target).after(JSON.stringify(Roppingi.Articles.toArray()));
-					$(target).after(Roppingi.Articles.toArray().toString());
+		            //$(target).after("<ol><li>" + Roppongi.Articles.toArray().join("</li><li>") + "</li></ol>");
+					$(target).after(JSON.stringify(Roppongi.Articles.toArray()));
+					//$(target).after(Roppongi.Articles.toArray().toString());
 		        }
-		        function displayProviders() {
-		            var prov = Roppongi.Providers;
-
+		        function displayProviders(target) {
+					$(target).after(JSON.stringify(Roppongi.Providers.toArray()));
 		        }
 
 
 		        // get the data
 		        getArticles();
-		  //      getProviders();
+		        getProviders();
 
 		        // set behavior
 		        $('#articles legend').click(function() {
 		            displayArticles(this);
 		        });
 		        $('#providers legend').click(function() {
-		            displayProviders();
+		            displayProviders(this);
 		        });
 		        
 		    });
-			*/
-			
     	</script>
         <h1>Test Data Page</h1>
 		<h2>Click on the legend</h2>
-		<fieldset id="articles">
+		<fieldset id="articles" class="waiting">
 			<legend>Articles</legend>
 		</fieldset>
-		<fieldset id="providers">
+		<fieldset id="providers" class="waiting">
 			<legend>Providers</legend>
 		</fieldset>
     </body>
