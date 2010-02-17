@@ -10,18 +10,19 @@ var Roppongi = {};
  * @classDescription A Teeboa article.
  * @param {Object} config
  */
-Roppongi.Article = function(config){
-	this.id = config.article_id;
-	this.headline = config.article_headline;
-	this.byLine = config.journalist_name;
-	this.deck = config.article_summary;
-	this.content = config.article_body_text;
-	this.dateline = config.article_timestamp;
-	this.providerName = config.supplier_name;
-	this.providerLogo = config.supplier_logo;
-	this.topic = config.topic_name;
-	this.purchaseTimestamp = config.purchase_timestamp;
-	this.price = config.purchase_timestamp;
+Roppongi.Article = function(config) {
+    this.id = config.article_id;
+    this.headline = config.article_headline;
+    this.byLine = config.journalist_name;
+    this.deck = config.article_summary;
+    this.content = config.article_body_text;
+    this.dateline = config.article_timestamp;
+    this.providerName = config.supplier_name;
+    this.providerLogo = config.supplier_logo;
+    this.topic = config.topic_name;
+    this.purchaseTimestamp = config.purchase_timestamp;
+    this.price = config.article_price;
+    this.isPurchased = config.is_purchased;
 };
 /**
  * A user
