@@ -17,16 +17,20 @@ namespace Roppongi.Api
         Stream GetArticles(string CustomerId);
 
         [OperationContract]
-        [WebGet(UriTemplate = "{CustomerId}/article{ArticleId}/Buy")]
+        [WebGet(UriTemplate = "{CustomerId}/article/{ArticleId}/Buy")]
         Stream BuyArticle(string CustomerId, string ArticleId);
 
         [OperationContract]
-        [WebGet(UriTemplate = "{CustomerId}/article{ArticleId}")]
+        [WebGet(UriTemplate = "{CustomerId}/article/{ArticleId}")]
         Stream GetArticle(string CustomerId, string ArticleId);
 
         [OperationContract]
-        [WebGet(UriTemplate = "{CustomerId}/Providers")]
-        Stream GetProviders(string CustomerId);
+        [WebGet(UriTemplate = "Providers")]
+        Stream GetProviders();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "{CustomerId}/Provider/{ProviderId}/Topics")]
+        Stream GetTopics(string CustomerId, string ProviderId);
 
         [OperationContract]
         [WebGet(UriTemplate = "{CustomerId}/Filters")]

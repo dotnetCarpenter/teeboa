@@ -44,10 +44,18 @@ namespace Roppongi.Api
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("article_detail", cust, article)));
         }
 
-        public Stream GetProviders(string CustomerId)
+        public Stream GetProviders()
         {
             WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
             return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("supplier_list", "providers")));
+        }
+
+        public Stream GetTopics(string CustomerId, string ProviderId)
+        {
+            FbParameter cust = new FbParameter("customer_id", CustomerId);
+            FbParameter supplierId = new FbParameter("supplier_id", ProviderId);
+            WebOperationContext.Current.OutgoingResponse.ContentType = contentType;
+            return new MemoryStream(Encoding.UTF8.GetBytes(GetJson("supplier_topic_list", "list", supplierId, cust)));
         }
 
         public Stream GetFilters(string CustomerId)

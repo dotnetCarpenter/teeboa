@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Data;
 using System.Text.RegularExpressions;
 using FirebirdSql.Data.FirebirdClient;
 using Roppongi.Library;
@@ -38,10 +39,6 @@ namespace Roppongi.Api
             // check if the json should contain an array and add array structure if true
             if (Regex.IsMatch(json.ToString(), "},{"))
             {
-                /*
-                json = new StringBuilder(
-                    Regex.Replace(json.ToString(), "(:{)", ":[{")
-                );*/
                 json.Insert((parentnodename.Length > 0 ? parentnodename.Length + 4 : 4), "[");
                 json.Insert(json.Length - 1, "]");
             }
@@ -63,7 +60,7 @@ namespace Roppongi.Api
             {
                 using (FbCommand cmd = conn.CreateCommand())
                 {
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.CommandText = CommandText;
 
                     for (int i = 0; i < pars.Length; i++)
@@ -85,5 +82,33 @@ namespace Roppongi.Api
                 }
             }
         }
+
+        /*private Data GetData(string CommandText, params FbParameter[] pars)
+        {
+            FbConnectionStringBuilder connString = TeeboaConnection.ConnectionString;
+            using (FbConnection conn = new FbConnection(connString.ToString()))
+            {
+                using (FbCommand cmd = conn.CreateCommand())
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.CommandText = CommandText;
+
+                    for (int i = 0; i < pars.Length; i++)
+                    {
+                        cmd.Parameters.Add(pars[i]);
+                    }
+                    try
+                    {
+                        conn.Open();
+                        return cmd.ExecuteReader();                           
+                        
+                    }
+                    catch (Exception ex)
+                    {
+                        throw ex;
+                    }
+                }
+            }
+        }*/
     }
 }
