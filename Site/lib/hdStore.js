@@ -69,7 +69,7 @@ function hdStore(id){
 	/* methods */
 	this.add = function(key, value){
 		if (this.exists(key)) {
-			throw new Error('Key ' + key + ' already exists in hdStore');
+			throw new Error('Key ' + key + ' already exists in instance ' + this.id + ' of hdStore');
 		} else {
 			_dict[key] = value;
 		}
@@ -121,15 +121,18 @@ function hdStore(id){
 		return filteredDict;
 	};
 	this.toArray = function(){
-		var a = [];//new Array(this.getCount());
-		for (var key in _dict){
-			if(_dict[key] != "undefined"){
-				a.push(_dict[key]);
-			} else {
-				console.warn(key + ":  is" + _dict[key]);
+		this.toArray = function(){
+			var a = [];
+			for (var key in _dict) {
+				if (_dict[key] != "undefined") {
+					a.push(_dict[key]);
+				}
+				else {
+					console.warn(key + ":  is" + _dict[key]);
+				}
 			}
+			return a;
 		}
-		return a;
 	};
 	this.toString = function(){
 		return this.id + " instance of hdStore";
@@ -147,6 +150,7 @@ function hdStore(id){
 		return _fireEvent('load');
 	};
 }
+
 /* getter/setter */
 /* TODO: refactor to seperate js file (which can be excluded from IE)*/
 /*if (!hdStore.__defineGetter) {
