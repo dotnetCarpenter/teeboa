@@ -61,21 +61,42 @@ Roppongi.Customer = function(config){
  * A provider.
  * @param {Object} config
  */
-Roppongi.Provider = function(config){
-	this.id = config.supplier_id;
-	this.name = config.supplier_name;
-	this.logo = config.supplier_logo;
-	this.topics = new hdStore('topics');
-	// add topics to the provider
-	for(var i = 0; i < config.supplier_topic_list.length; i++){
-		this.topics.add(
-			config.supplier_topic_list[i].topic_id,{
-				text: config.supplier_topic_list[i].topic_text,
-				isSelected: config.supplier_topic_list[i].is_topic_selected
-			}
-		);
-	};
-	return this.id;
+Roppongi.Provider = function(config) {
+    this.id = config.supplier_id;
+    this.name = config.supplier_name;
+    this.logo = config.supplier_logo;
+    this.topics = new hdStore('topics');
+    // add topics to the provider
+    if (config.supplier_topic_list) { this.addTopics(config.supplier_topic_list); }
+    /**
+     * Add a topic manually to local object
+     * @param {Object} topics Has the following properties: text, isSelected and is stored in hdStore by id
+     * @method addTopics
+     */
+    this.addTopics = function(topics) {
+        for (var i = 0; i < topics.list.length; i++) {
+            this.topics.add(
+			    topics.list[i].topic_id, {
+			        text: topics.list[i].topic_name,
+			        isSelected: topics.list[i].is_topic_selected
+			    }
+		    );
+        };
+    }
+	/**
+	 * Load topics stored on the server
+	 * @method loadTopics
+	 */
+	this.loadTopics = function(customerid, fn, scope){
+		var refAddTopics = this.addTopics;
+		var self = this;
+		jQuery.getJSON("api/" + customerid + "/provider/" + this.id + "/topics", function(data, textStatus){
+			refAddTopics.call(self, data);
+			scope ? fn.call(scope): fn();
+		});
+	}
+	
+    return this.id;
 };
 /**
  * A transaction.

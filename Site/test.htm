@@ -30,6 +30,7 @@
 				
 
 		        function getArticles() {
+//					$('h1').after("<h2 id='loadArt'>loading articles</h2>").show('fast');
 		            $.getJSON("api/" + user.id + "/articles", function(data, textStatus) {
 					//$.getJSON("json/articles.json", function(data, textStatus) {
 		                var article;
@@ -38,23 +39,38 @@
 								article = new Roppongi.Article(data.articles[key]);
 								Roppongi.Articles.add(article.id, article);
 							}
-						}
-						catch(e){
-							console.debug(e);
+						}catch(e){
+							console.error(e);
+							return;
 						}
 						$('#articles').removeClass('waiting').addClass('ready');
+//						$('#loadArt').hide('slow');
 		            });
 		        }
 		        function getProviders() {
-		            $.getJSON("api/" + user.id + "/providers", function(data, textStatus) {
+		            $.getJSON("api/providers", function(data, textStatus) {
 		                var provider;
-		                for (var key in data.providers) {
-		                    provider = new Roppongi.Provider(data.providers[key]);
-		                    Roppongi.Articles.add(provider.id, provider);
-		                }
+						try {
+			                for (var key in data.providers) {
+			                    provider = new Roppongi.Provider(data.providers[key]);
+			                    Roppongi.Providers.add(provider.id, provider);
+			                }
+						}catch(e){
+							console.error(e);
+							return;
+						}
 						$('#providers').removeClass('waiting').addClass('ready');
+						getProviderTopics(5);
 		            });
 		        }
+				
+				function getProviderTopics(providerid){
+					$('#providers').removeClass('ready').addClass('waiting');
+					var provider = Roppongi.Providers.getItem(providerid);
+					provider.loadTopics(user.id, function(){
+						$('#providers').removeClass('waiting').addClass('ready');
+					});
+				}
 				
 			$(function() {
 		        function displayArticles(target) {
@@ -70,6 +86,7 @@
 		        // get the data
 		        getArticles();
 		        getProviders();
+				
 
 		        // set behavior
 		        $('#articles legend').click(function() {
